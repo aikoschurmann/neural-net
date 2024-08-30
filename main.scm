@@ -32,12 +32,6 @@
 (newline)
 
 
-(define (mean-squared-error predicted actual)
-  (let ((diff (matrix-subtract predicted actual)))
-    (matrix-scalar-multiply (matrix-sum (matrix-map diff sqr) 'cols) (/ 1 (* 2 (vector-length actual))))))
-
-(define (derivative-mean-squared-error predicted actual)
-  (matrix-scalar-multiply (matrix-subtract predicted actual) (/ 1 (vector-length actual))))
 
 
 (define (milliseconds->minutes-seconds ms)
