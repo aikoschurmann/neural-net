@@ -21,3 +21,9 @@
 (define (decimal-round number decimals)
   (let ((decimal (expt 10 decimals)))
     (/ (round (* number decimal)) decimal)))
+
+(define (milliseconds->minutes-seconds ms)
+  (let* ((total-seconds (/ ms 1000))
+         (minutes (quotient (round total-seconds) 60))
+         (seconds (remainder (round total-seconds) 60)))
+    (string-append (number->string minutes) "m:" (number->string seconds) "s")))
