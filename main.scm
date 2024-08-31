@@ -7,7 +7,7 @@
 (load "activations.scm")
 (load "initializers.scm")
 (load "neuralnet.scm")
-(load "mnist.scm")
+
 
 
 
